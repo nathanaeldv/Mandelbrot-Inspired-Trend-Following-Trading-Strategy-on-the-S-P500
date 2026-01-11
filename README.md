@@ -34,7 +34,7 @@ These stylized facts, emphasized by Benoît Mandelbrot, challenge classical assu
 - constant variance
 - purely mean-variance optimization
 
-As a result, this project adopts a risk-first approach, where exposure is adjusted dynamically based on market volatility, not solely on directional forecasts.
+As a result, this project adopts a **risk-first approach**, where exposure is adjusted dynamically based on market volatility, not solely on directional forecasts.
 
 
 3. Strategy Description
@@ -103,7 +103,7 @@ This mechanism:
 - Transaction costs: 2 bps per unit of turnover
 - Slippage: 0 bps
 
-The combination of weekly rebalancing and a threshold rule significantly reduces unnecessary trading and reflects realistic operational constraints.
+The combination of weekly rebalancing and a threshold rule significantly **reduces unnecessary trading** and **reflects realistic operational constraints**.
 
 
 4. Backtesting Methodology
@@ -163,14 +163,14 @@ Both equity curves are rebased to 1.0 at the start of the reporting period for d
 
 6.1 Relative Performance
 
-Over a strongly bullish period (2023–2024), the strategy underperforms Buy & Hold in absolute return, which is expected by construction.
+Over a strongly bullish period (2023–2024), **the strategy underperforms Buy & Hold in absolute return**, which is expected by construction.
 
 However, it achieves:
 - lower volatility
 - significantly reduced drawdowns
 - more stable risk exposure
 
-This behavior is fully consistent with the strategy’s design philosophy.
+This behavior is **fully consistent with the strategy’s design philosophy**.
 
 
 6.2 Risk-Adjusted Profile
@@ -180,7 +180,7 @@ The strategy exhibits:
 - controlled downside risk
 - implicit convexity with respect to volatility shocks
 
-It is not designed to outperform during pure bull markets, but rather to maximize risk-adjusted growth across full market cycles.
+It is **not designed to outperform during pure bull markets**, but rather to **maximize risk-adjusted growth across full market cycles**.
 
 
 7. Limitations and Extensions
