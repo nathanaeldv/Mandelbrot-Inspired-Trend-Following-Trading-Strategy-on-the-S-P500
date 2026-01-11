@@ -1,8 +1,10 @@
 # Mandelbrot-Inspired-Trend-Following-Trading-Strategy-on-the-S-P500
-A systematic trend-following strategy on the S&amp;P 500 inspired by Mandelbrot, combining multi-scale moving averages with volatility-targeted position sizing. The focus is on risk control, drawdown reduction, and regime-aware exposure, implemented and backtested end-to-end in Python
+A systematic trend-following strategy on the S&amp;P 500 inspired by Mandelbrot, combining multi-scale moving averages with volatility-targeted position sizing. The focus is on **risk control, drawdown reduction, and regime-aware exposure**, implemented and backtested end-to-end in Python
 
 
-To run the program : python main.py --ticker SPY --start 2023-01-01 --end 2024-12-31 --fee_bps 2 --rebalance W-FRI --rebalance_threshold 0.15 --target_vol 0.12 --max_leverage 1.5 --ma_fast 40 --ma_slow 160 --vol_window 20
+To run the program : 
+
+python main.py --ticker SPY --start 2023-01-01 --end 2024-12-31 --fee_bps 2 --rebalance W-FRI --rebalance_threshold 0.15 --target_vol 0.12 --max_leverage 1.5 --ma_fast 40 --ma_slow 160 --vol_window 20
 
 
 
