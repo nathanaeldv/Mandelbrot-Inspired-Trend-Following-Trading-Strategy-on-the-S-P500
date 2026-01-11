@@ -7,11 +7,11 @@ A systematic trend-following strategy on the S&amp;P 500 inspired by Mandelbrot,
 This project implements and analyzes a systematic trading strategy inspired by the work of Benoît Mandelbrot, applied to the S&P 500 ETF (SPY).
 
 The objective is not to maximize short-term absolute returns, but to design a robust exposure framework that:
-- accounts for non-Gaussian return distributions,
-- adapts to changing volatility regimes,
-- prioritizes risk control and drawdown management,
-- reflects design principles commonly used on macro, CTA, and systematic trading desks.
-- 
+- accounts for non-Gaussian return distributions
+- adapts to changing volatility regimes
+- prioritizes risk control and drawdown management
+- reflects design principles commonly used on macro, CTA, and systematic trading desks
+
 The strategy is fully implemented in Python, backtested end-to-end, and documented with transparent assumptions.
 
 
@@ -20,15 +20,15 @@ The strategy is fully implemented in Python, backtested end-to-end, and document
 2.1 Limits of the Gaussian Framework
 
 Empirical market data exhibits:
-- fat tails,
-- volatility clustering,
-- regime shifts.
+- fat tails
+- volatility clustering
+- regime shifts
 
 
 These stylized facts, emphasized by Benoît Mandelbrot, challenge classical assumptions such as:
-- independent and identically distributed returns,
-- constant variance,
-- purely mean-variance optimization.
+- independent and identically distributed returns
+- constant variance
+- purely mean-variance optimization
 
 As a result, this project adopts a risk-first approach, where exposure is adjusted dynamically based on market volatility, not solely on directional forecasts.
 
@@ -67,9 +67,9 @@ Otherwise	                            0.0
 
 
 This design:
-- avoids excessive time spent in cash,
-- reduces unnecessary turnover,
-- captures persistent upward trends without over-reacting to short-term noise.
+- avoids excessive time spent in cash
+- reduces unnecessary turnover
+- captures persistent upward trends without over-reacting to short-term noise
 
 
 3.3 Position Sizing: Volatility Targeting
@@ -87,9 +87,9 @@ Weight = Signal × min(Max Leverage, Target Volatility / Realized Volatility)
 
 
 This mechanism:
-- reduces exposure during high-volatility regimes,
-- increases exposure when markets are stable,
-- aims to maintain a consistent risk profile over time.
+- reduces exposure during high-volatility regimes
+- increases exposure when markets are stable
+- aims to maintain a consistent risk profile over time
 
 
 3.4 Rebalancing and Transaction Costs
@@ -107,8 +107,8 @@ The combination of weekly rebalancing and a threshold rule significantly reduces
 4.1 Warm-Up Period
 
 Additional historical data is downloaded prior to the reporting window to:
-- stabilize moving averages,
-- avoid artificially flat equity curves caused by indicator initialization.
+- stabilize moving averages
+- avoid artificially flat equity curves caused by indicator initialization
 
 All performance metrics and plots are computed strictly within the reporting window.
 
@@ -162,9 +162,9 @@ Both equity curves are rebased to 1.0 at the start of the reporting period for d
 Over a strongly bullish period (2023–2024), the strategy underperforms Buy & Hold in absolute return, which is expected by construction.
 
 However, it achieves:
-- lower volatility,
-- significantly reduced drawdowns,
-- more stable risk exposure.
+- lower volatility
+- significantly reduced drawdowns
+- more stable risk exposure
 
 This behavior is fully consistent with the strategy’s design philosophy.
 
@@ -172,9 +172,9 @@ This behavior is fully consistent with the strategy’s design philosophy.
 6.2 Risk-Adjusted Profile
 
 The strategy exhibits:
-- smoother equity growth,
-- controlled downside risk,
-- implicit convexity with respect to volatility shocks.
+- smoother equity growth
+- controlled downside risk
+- implicit convexity with respect to volatility shocks
 
 It is not designed to outperform during pure bull markets, but rather to maximize risk-adjusted growth across full market cycles.
 
